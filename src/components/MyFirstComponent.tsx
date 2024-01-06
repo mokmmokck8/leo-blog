@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 export const MyFirstComponent = () => {
   return (
     <div>
-      <Button>Hello World</Button>
+      <Button onClick={() => console.log("asefaesasef")}>Hello World</Button>
     </div>
   );
 };
