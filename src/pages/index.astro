@@ -1,23 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import { MyFirstComponent } from '@/components/MyFirstComponent';
-import {ModeToggle} from '@/components/ModeToggle'
-
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+import { MyFirstComponent } from '@/components/MyFirstComponent'
+import { ModeToggle } from '@/components/ModeToggle'
 ---
 
-
-
 <Layout title="Welcome to Astro.">
-	<main>
-		HIHI
-		<ModeToggle client:load />
+    <ModeToggle client:load />
 
-		<h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-			Welcome
-		  </h1>
-	</main>
+    <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">Hello World!</h1>
 </Layout>
-
 
 <style></style>
