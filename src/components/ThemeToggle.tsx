@@ -9,11 +9,10 @@ export enum Theme {
     'SYSTEM' = 'system',
 }
 
-export const ModeToggle = () => {
+export const ThemeToggle = () => {
     const [theme, setThemeState] = useState<Theme>(Theme.LIGHT)
 
     const handleClick = () => {
-        console.log(theme, 'hihi')
         setThemeState(theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT)
     }
 

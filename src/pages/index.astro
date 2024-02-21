@@ -2,13 +2,18 @@
 import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
 import { MyFirstComponent } from '@/components/MyFirstComponent'
-import { ModeToggle } from '@/components/ModeToggle'
+import { ThemeToggle } from '@/components/ThemeToggle'
 ---
 
 <Layout title="Welcome to Astro.">
-    <ModeToggle client:load />
+    <main>
+        <div class="flex items-center justify-center gap-10">
+            <div class="h-[200px] w-[200px] bg-yellow-500"></div>
+            <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+                Hello World!
+            </h1>
+        </div>
+    </main>
 
-    <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">Hello World!</h1>
+    <style></style>
 </Layout>
-
-<style></style>

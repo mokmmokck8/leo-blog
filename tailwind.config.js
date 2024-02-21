@@ -1,7 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: ['class'],
-    content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
+    content: [
+        './pages/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+        './components/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+        './app/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+        './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+    ],
+    prefix: '',
     theme: {
         container: {
             center: true,
@@ -12,6 +18,8 @@ module.exports = {
         },
         extend: {
             colors: {
+                gray: '#8492a6',
+
                 border: 'hsl(var(--border))',
                 input: 'hsl(var(--input))',
                 ring: 'hsl(var(--ring))',
@@ -53,20 +61,12 @@ module.exports = {
             },
             keyframes: {
                 'accordion-down': {
-                    from: {
-                        height: 0,
-                    },
-                    to: {
-                        height: 'var(--radix-accordion-content-height)',
-                    },
+                    from: { height: '0' },
+                    to: { height: 'var(--radix-accordion-content-height)' },
                 },
                 'accordion-up': {
-                    from: {
-                        height: 'var(--radix-accordion-content-height)',
-                    },
-                    to: {
-                        height: 0,
-                    },
+                    from: { height: 'var(--radix-accordion-content-height)' },
+                    to: { height: '0' },
                 },
             },
             animation: {

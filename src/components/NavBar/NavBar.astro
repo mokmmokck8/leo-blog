@@ -1,16 +1,13 @@
 ---
+import { ThemeToggle } from '../ThemeToggle'
 import { Button } from '../ui/button'
 
 const { href, title, body } = Astro.props
 ---
 
-<div class="flex align-middle">
+<div class="flex items-center justify-center">
     <Button variant="link">About me</Button>
     <Button variant="link">Skill</Button>
     <Button variant="link">Tools</Button>
+    <ThemeToggle client:load />
 </div>
-
-<style>
-    .custom {
-    }
-</style>
